@@ -28,6 +28,8 @@ async function main() {
     const directoryName = "<path/from/root/to/file/>";
     const vaultName = "<CCSM keyvault name>";
     const SASToken = "<SAS token>";
+    const filename = "<Filename>";
+
     //variables get from vault
     let passphrase = "";
     try{
