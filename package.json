@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@azure/storage-file-share": "^12.11.0",
+    "@azure/identity": "^2.1.0",
+    "@azure/keyvault-secrets": "^4.5.1",
     "fs": "0.0.1-security",
     "gpg-with-err-handling": "^1.0.7"
   }
