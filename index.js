@@ -22,13 +22,13 @@ async function streamToBuffer(readableStream) {
 main();
 async function main() {
     console.log("Start     : ==========================================")
-    //variables set in code
+    //variables set in code/env
     const account = "<Storage Account Name>";
     const shareName = "<Fileshare Root Folder Name>"
     const directoryName = "<path/from/root/to/file/>";
     const vaultName = "<CCSM keyvault name>";
+    const SASToken = "<SAS token>";
     //variables get from vault
-    let SASToken = ""
     let passphrase = "";
     try{
         //Get secrets from vault
@@ -39,9 +39,6 @@ async function main() {
         let secretName = "<ENCRYPTION_KEY_SECRET_NAME>";
         const latestSecret = await client.getSecret(secretName);
         passphrase = latestSecret.value;
-        secretName = "<SAS_TOKEN_SECRET_NAME>";
-        const latestSecret = await client.getSecret(secretName);
-        SASToken = latestSecret.value;
 
         //List Share name
         serviceClient = new ShareServiceClient(
